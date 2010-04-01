@@ -1,0 +1,5 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3036
+
+This highlights text based on xterm escape sequences using the appropriate color. This is similar to the AnsiEsc script but does not depend on the Conceal patch.  (http://www.vim.org/scripts/script.php?script_id=302)
+
+This is done using one of two modes and is configured by setting the g:xterm_trim_escapes variable. When set to 0, escape sequences will be left in the buffer and highlighted using the Ignore group. When set to 1 and the buffer is modifiable, escape sequences will be deleted and highlighting will be performed based on row-column matching. Row-column matching may not work well if the file is being edited but is appropriate under some circumstances. Note that this only affect the escape sequences themselves, not highlighted text.
